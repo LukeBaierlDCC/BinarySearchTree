@@ -10,23 +10,12 @@ namespace BinarySearchTree
     {
         Node left, right;
         int data;
-        //I do plan on changing this to a while loop.
+        private object value;
         public Node(int data)
         {
-            this.data = data;
-        }
-        public void insert(int value)
-        {
-            if (value <= data)
+            if (left == null)
             {
-                if (left == null)
-                {
-                    left = new Node(value);
-                }
-                else
-                {
-                    left.insert(value);
-                }
+                left = new Node(value);
             }
             else
             {
@@ -41,9 +30,20 @@ namespace BinarySearchTree
             }
         }
 
+        public Node(object value)
+        {
+            this.value = value;
+        }
+
+        private void insert(object value)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool contains(int value)
         {
-            if (value == data) {
+            if (value == data)
+            {
                 return true;
             }
             else if (value < data)
@@ -57,7 +57,8 @@ namespace BinarySearchTree
                     return left.contains(value);
                 }
             }
-            else {
+            else
+            {
                 if (right == null)
                 {
                     return false;
@@ -68,20 +69,23 @@ namespace BinarySearchTree
                 }
             }
         }
-    }
 
-    public void printInOrder()
-    {
-        if (left != null)
+        public void printInOrder()
         {
-            left.printInOrder();
+            if (left != null)
+            {
+                left.printInOrder();
+            }
+            System.out.printIn(data);
+            if (right != null)
+            {
+                right.printInOrder();
+            }
         }
-        System.out.println(data);
-        if (right != null)
+
+        private void printIn(int data)
         {
-            right.printInOrder();
+            throw new NotImplementedException();
         }
     }
-
-
 }
