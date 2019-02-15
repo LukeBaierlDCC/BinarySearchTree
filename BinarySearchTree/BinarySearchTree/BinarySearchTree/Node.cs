@@ -42,7 +42,7 @@ namespace BinarySearchTree
 
         public boolean contains(int value)
         {
-            if value == data) {
+            if (value == data) {
                 return true;
             }
             else if (value < data)
