@@ -10,6 +10,7 @@ namespace BinarySearchTree
     {
         Node left, right;
         int data;
+        //I do plan on changing this to a while loop.
         public Node(int data)
         {
             this.data = data;
@@ -40,7 +41,7 @@ namespace BinarySearchTree
             }
         }
 
-        public boolean contains(int value)
+        public bool contains(int value)
         {
             if (value == data) {
                 return true;
@@ -74,6 +75,11 @@ namespace BinarySearchTree
         if (left != null)
         {
             left.printInOrder();
+        }
+        System.out.println(data);
+        if (right != null)
+        {
+            right.printInOrder();
         }
     }
 
