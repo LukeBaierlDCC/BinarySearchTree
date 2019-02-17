@@ -6,28 +6,36 @@ using System.Threading.Tasks;
 
 namespace BinarySearchTree
 {
-    class Node
+    public class Node
     {
-        Node left, right;
-        int data;
+        public int data;
+        public Node leftChild;
+        public Node rightChild;
+
+        //Node left, right;
+        //int data;
         private object value;
         public Node(int data)
         {
-            if (left == null)
-            {
-                left = new Node(value);
-            }
-            else
-            {
-                if (right == null)
-                {
-                    right = new Node(value);
-                }
-                else
-                {
-                    right.insert(value);
-                }
-            }
+            this.data = data;
+            leftChild = null;
+            rightChild = null;
+
+            //if (left == null)
+            //{
+            //    left = new Node(value);
+            //}
+            //else
+            //{
+            //    if (right == null)
+            //    {
+            //        right = new Node(value);
+            //    }
+            //    else
+            //    {
+            //        right.insert(value);
+            //    }
+            //}
         }
 
         public Node(object value)
@@ -69,7 +77,7 @@ namespace BinarySearchTree
                 }
             }
         }
-
+        
         public void printInOrder()
         {
             if (left != null)
