@@ -114,19 +114,19 @@ namespace BinarySearchTree
                 }
             }
         }
-        
-        //public void printInOrder()
-        //{
-        //    if (left != null)
-        //    {
-        //        left.printInOrder();
-        //    }
-        //    System.out.printIn(data);
-        //    //if (right != null)
-        //    {
-        //        right.printInOrder();
-        //    }
-        //}
+
+        public void printInOrder()
+        {
+            if (left != null)
+            {
+                left.printInOrder();
+            }
+            System.Out.printIn(data);
+            //if (right != null)
+            {
+                right.printInOrder();
+            }
+        }
 
         private void printIn(int data)
         {
